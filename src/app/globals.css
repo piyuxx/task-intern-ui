@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow-x: hidden;
+}
+
+@layer base {
+  html {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    /* width */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+    
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 2px grey;
+        border-radius: 10px;
+      }
+    
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #ddaafa;
+        border-radius: 8px;
+      }
+    
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #e6c5fa;
+      }
+  }
+}
